@@ -1,0 +1,149 @@
+<form #frm="ngForm" (ngSubmit)="save()">
+    <nb-card>
+      <nb-card-header class="nb-card-header">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <label *ngIf="dataRef.actionType === statusAction.create"><h5> Thêm mới {{ titlelabel }} </h5></label>
+            <label *ngIf="dataRef.actionType === statusAction.edit"><h5> Cập nhật {{ titlelabel }} </h5></label>
+            <label *ngIf="dataRef.actionType === statusAction.detail"><h5> Chi tiết {{ titlelabel }} </h5></label>
+          </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 ">
+                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                            <img [src]="target.proAvatar" alt="" style="width:100%; height:100% ;border:solid 2px silver" id="image">
+                        </div>
+                    <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12" *ngIf="dataRef.actionType !== statusAction.detail">
+                        <div class="input-group border">
+                            <input style="outline:none; border: none" type="file" class="form-control" id="loadimage" (change)="handleUpload($event)" />
+                            &nbsp;
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <ngx-icon-delete title="Xóa ảnh" style="cursor: pointer;" (click)="DeleteImg()"></ngx-icon-delete>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 mt-3">
+                    <div class="form-group">
+                        <label class="control-label">Mô tả sản phẩm</label>
+                        <textarea class="form-control" style="width:100%; max-height: 200px;"
+                            name="proDescription" 
+                            [(ngModel)]="target.proDescription"
+                            maxlength="1000" 
+                            [disabled]="dataRef.actionType === statusAction.detail" required=""
+                            >
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                        <div class="form-group">
+                            <label class="control-label required">Mã sản phẩm</label>
+                            <input type="text" class="form-control"
+                                    name="proCode" 
+                                    [(ngModel)]="target.proCode"
+                                    maxlength="500" 
+                                    [disabled]="dataRef.actionType === statusAction.detail" required=""
+                                    />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 mt-3">
+                        <div class="form-group">
+                            <label class="control-label required">Tên sản phẩm</label>
+                            <textarea type="text" class="form-control"
+                                    name="address" 
+                                    [(ngModel)]="target.proName"
+                                    maxlength="500" 
+                                    [disabled]="dataRef.actionType === statusAction.detail" required=""
+                                    >
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex mt-3">
+                    <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label required">Giá</label>
+                            <input type="number" class="form-control" min="0"
+                                    name="proPrice" 
+                                    [(ngModel)]="target.proPrice"
+                                    maxlength="500" 
+                                    [disabled]="dataRef.actionType === statusAction.detail"
+                                    />
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label required">Số lượng</label>
+                            <input type="number" class="form-control" min="0"
+                                    name="proproQuantityPrice" 
+                                    [(ngModel)]="target.proQuantity"
+                                    maxlength="500" 
+                                    [disabled]="dataRef.actionType === statusAction.detail"
+                                    />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 mt-3">
+                    <div class="form-group">
+                        <label class="control-label required">Hãng sản xuất</label>
+                        <ng-select class="control-label" placeholder="--Chọn hãng sản xuất--"
+                            name="supplierId"
+                            [items]="listOriginal" 
+                            bindLabel="name" bindValue="supplierId"
+                            [(ngModel)]="target.supplierId" #status="ngModel" 
+                            [disabled]="dataRef.actionType === statusAction.detail"
+                            required>
+                        </ng-select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 mt-3">
+                    <div class="form-group">
+                        <label class="control-label">Thuộc danh mục</label>
+                        <ng-select class="control-label"
+                            name="categoryId" placeholder="-- Chọn danh mục --" 
+                            [items]="listCategory" 
+                            bindValue="catId" bindLabel="catName" 
+                            [(ngModel)]="target.categoryId" #status="ngModel" 
+                            [disabled]="dataRef.actionType === statusAction.detail"
+                            >
+                        </ng-select>
+                    </div>
+                </div>
+
+                    <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 mt-3">
+                        <div class="form-group">
+                            <label class="control-label ">Giảm giá</label>
+                            <ng-select class="control-label"
+                                name="proSale" placeholder="-- Được giảm giá  --" 
+                                [items]="listSale" 
+                                bindValue="value" bindLabel="text" 
+                                [(ngModel)]="target.proSale" #status="ngModel" 
+                                [disabled]="dataRef.actionType === statusAction.detail"
+                                >
+                            </ng-select>
+                        </div>
+                    </div>
+                    </div>
+         </div>
+    
+      </nb-card-body>
+      <nb-card-footer class="text-right">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 text-right">
+            <ngx-btn-submit [disabled]="frm.invalid"
+              *ngIf="dataRef.actionType !== statusAction.detail"></ngx-btn-submit>&nbsp;
+            <ngx-btn-close mat-dialog-close (click)="closeDialog(true)"></ngx-btn-close>
+          </div>
+        </div>
+      </nb-card-footer>
+    </nb-card>
+  </form>
+  

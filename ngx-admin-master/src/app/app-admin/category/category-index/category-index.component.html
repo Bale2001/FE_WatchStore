@@ -1,0 +1,77 @@
+<nb-card>
+    <nb-card-header class="nb-card-header">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+          <h5 class="title-header" style="text-transform: uppercase;">Quản lý danh mục</h5>
+        </div>
+      </div>
+    </nb-card-header>
+    <nb-card-body>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+          <div class="input-group">
+            <ngx-btn-add data-toggle="tooltip" title="Thêm mới" (click)="openCreateDialog()"></ngx-btn-add>
+            &nbsp;
+            <input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm"
+              name="seach">&nbsp;
+            <ngx-btn-search ></ngx-btn-search>&nbsp;
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row" style="overflow: auto;">
+        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="text-center align-middle " style="width: 50px;">STT</th>
+                <th class="text-center align-middle " style="min-width: 100px;">Tên danh mục</th>
+                <th class="text-center align-middle " style="min-width: 100px;">Tiêu đề Meta</th>
+                <th class="text-center align-middle " style="min-width: 150px;">Trạng thái</th>
+                <th class="text-center align-middle " style="min-width: 100px;">Mô tả</th>
+                <th class="text-center align-middle " style="min-width: 100px;">Hành động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of target, let i = index">
+                <td class="text-center align-middle">{{ i+1 }}</td>
+                <td>{{ item.catName }}</td>
+                <td>{{ item.catMetaTitle }}</td>
+                <td class="text-center align-middle ">{{item.catStatus === true ? "Sử dụng" : "Không sử dụng"}}</td>
+                <td>{{ item.catDescription }}</td>
+                <td class="text-center align-middle">
+                  <ngx-icon-info title="Xem chi tiết" style="cursor: pointer;"
+                    (click)="openDetailDialog(item.catId)"></ngx-icon-info>&nbsp;&nbsp;
+                  <ngx-icon-edit title="Cập nhật" style="cursor: pointer;"
+                    (click)="openEditDialog(item.catId)"></ngx-icon-edit>&nbsp;&nbsp;
+                  <ngx-icon-delete title="Xóa" style="cursor: pointer;"
+                    (click)="openDeleteDialog(item.catId, item.catName)"></ngx-icon-delete>
+                </td>
+              </tr>
+              <tr *ngIf="target.length === 0">
+                <td colspan="6">Không có dữ liệu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </nb-card-body>
+    <nb-card-footer>
+      <div class="row" >
+        <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4">
+          <div style="float: left;">
+            Tổng số bản ghi: {{target.length}}
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 col-lg-8">
+          <div style="float: right;">
+            <!-- <ngx-pagination (pageChange)="pageModel.currentPage = $event;loadData()"
+              (pageSize)="pageModel.pageSize = $event;searchPage()" [currentPage]="pageModel.currentPage"
+              [totalPages]="target.totalPage">
+            </ngx-pagination> -->
+          </div>
+        </div>
+      </div>
+    </nb-card-footer>
+  </nb-card>
+  

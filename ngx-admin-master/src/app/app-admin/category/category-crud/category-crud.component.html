@@ -1,0 +1,73 @@
+<form #frm="ngForm" (ngSubmit)="save()">
+    <nb-card>
+      <nb-card-header class="nb-card-header">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <label style="text-transform: uppercase;" *ngIf="dataRef.actionType === statusAction.create"><h5> Thêm mới {{ titlelabel }} </h5></label>
+            <label style="text-transform: uppercase;" *ngIf="dataRef.actionType === statusAction.edit"><h5> Cập nhật {{ titlelabel }} </h5></label>
+            <label style="text-transform: uppercase;" *ngIf="dataRef.actionType === statusAction.detail"><h5> Chi tiết {{ titlelabel }} </h5></label>
+          </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <div class="form-group">
+              <label class="control-label required">Tên danh mục</label>
+              <input type="text" class="form-control"
+                    name="catName" 
+                    [(ngModel)]="target.catName"
+                    maxlength="200" 
+                    required
+                    [disabled]="dataRef.actionType === statusAction.detail"
+                     />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <div class="form-group">
+              <label class="control-label">Tiêu đề Meta</label>
+              <input type="text" class="form-control"
+                    name="catMetaTitle" 
+                    [(ngModel)]="target.catMetaTitle"
+                    maxlength="200" 
+                    [disabled]="dataRef.actionType === statusAction.detail"
+                />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                <div class="form-group">
+                    <label class="control-label ">Mô tả</label>
+                    <textarea class="form-control"
+                        name="catDescription" 
+                        [(ngModel)]="target.catDescription"
+                        maxlength="200" 
+                        [disabled]="dataRef.actionType === statusAction.detail"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+              <div class="form-group">
+                <label class="control-label required">Trạng thái </label>
+                <ng-select name="catStatus" placeholder="-- Chọn trạng thái --" 
+                  [items]="ListStatus" 
+                  bindValue="value" bindLabel="text" 
+                  [(ngModel)]="target.catStatus" #catStatus="ngModel" 
+                  [disabled]="dataRef.actionType === statusAction.detail"
+                  required>
+                </ng-select>
+              </div>
+            </div>
+        </div>
+      </nb-card-body>
+      <nb-card-footer class="text-right">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 text-right">
+            <ngx-btn-submit [disabled]="frm.invalid"
+              *ngIf="dataRef.actionType !== statusAction.detail"></ngx-btn-submit>&nbsp;
+            <ngx-btn-close mat-dialog-close (click)="closeDialog(true)"></ngx-btn-close>
+          </div>
+        </div>
+      </nb-card-footer>
+    </nb-card>
+  </form>
+  

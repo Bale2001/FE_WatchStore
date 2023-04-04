@@ -1,0 +1,61 @@
+<form #frm="ngForm" (ngSubmit)="save()">
+    <nb-card>
+      <nb-card-header class="nb-card-header">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <label *ngIf="dataRef.actionType === statusAction.create"><h5> Thêm mới {{ titlelabel }} </h5></label>
+            <label *ngIf="dataRef.actionType === statusAction.edit"><h5> Cập nhật {{ titlelabel }} </h5></label>
+            <label *ngIf="dataRef.actionType === statusAction.detail"><h5> Chi tiết {{ titlelabel }} </h5></label>
+          </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <div class="form-group">
+              <label class="control-label required">Tên hãng sản xuất</label>
+              <input type="text" class="form-control"
+                    name="name" 
+                    [(ngModel)]="target.name"
+                    maxlength="200" 
+                    required
+                    [disabled]="dataRef.actionType === statusAction.detail"
+                     />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <div class="form-group">
+              <label class="control-label required">Địa chỉ</label>
+              <input type="text" class="form-control"
+                    name="address" 
+                    [(ngModel)]="target.address"
+                    maxlength="500" 
+                    [disabled]="dataRef.actionType === statusAction.detail"
+                     />
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <div class="form-group">
+              <label class="control-label required">Số điện thoại</label>
+              <input type="number" class="form-control" min="0"
+                    name="phone" 
+                    [(ngModel)]="target.phone" 
+                    [disabled]="dataRef.actionType === statusAction.detail"
+                    required
+                     />
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+      <nb-card-footer class="text-right">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 text-right">
+            <ngx-btn-submit [disabled]="frm.invalid"
+              *ngIf="dataRef.actionType !== statusAction.detail"></ngx-btn-submit>&nbsp;
+            <ngx-btn-close mat-dialog-close (click)="closeDialog(true)"></ngx-btn-close>
+          </div>
+        </div>
+      </nb-card-footer>
+    </nb-card>
+  </form>
+  
