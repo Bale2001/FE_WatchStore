@@ -698,7 +698,7 @@ export class WatchStore implements IWatchStore {
             result200 = Category.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -753,7 +753,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -803,7 +803,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -862,7 +862,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -921,7 +921,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -978,7 +978,7 @@ export class WatchStore implements IWatchStore {
             result200 = Comment.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1033,7 +1033,7 @@ export class WatchStore implements IWatchStore {
             result200 = Comment.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1088,7 +1088,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1138,7 +1138,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1197,7 +1197,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1254,7 +1254,7 @@ export class WatchStore implements IWatchStore {
             result200 = Feedback.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1309,7 +1309,7 @@ export class WatchStore implements IWatchStore {
             result200 = Feedback.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1364,7 +1364,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1414,7 +1414,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1473,7 +1473,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1530,7 +1530,7 @@ export class WatchStore implements IWatchStore {
             result200 = Image.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1585,7 +1585,7 @@ export class WatchStore implements IWatchStore {
             result200 = Image.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1640,7 +1640,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1690,7 +1690,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1749,7 +1749,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1806,7 +1806,7 @@ export class WatchStore implements IWatchStore {
             result200 = OrderDetail.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1861,7 +1861,7 @@ export class WatchStore implements IWatchStore {
             result200 = OrderDetail.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1916,7 +1916,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -1966,7 +1966,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2025,7 +2025,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2082,7 +2082,7 @@ export class WatchStore implements IWatchStore {
             result200 = Order.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2137,7 +2137,7 @@ export class WatchStore implements IWatchStore {
             result200 = Order.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2192,7 +2192,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2242,7 +2242,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2301,7 +2301,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2358,7 +2358,7 @@ export class WatchStore implements IWatchStore {
             result200 = Original.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2413,7 +2413,7 @@ export class WatchStore implements IWatchStore {
             result200 = Original.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2468,7 +2468,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2518,7 +2518,7 @@ export class WatchStore implements IWatchStore {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return _observableOf<void>(null as any);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2577,7 +2577,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2636,7 +2636,7 @@ export class WatchStore implements IWatchStore {
             }
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
@@ -2693,7 +2693,7 @@ export class WatchStore implements IWatchStore {
             result200 = Product.fromJS(resultData200, _mappings);
             return _observableOf(result200);
             }));
-        } else if (status !== 200 && status !== 204 && status !== 201) {
+        } else if (status !== 200 && status !== 204 && status !== 201 && status !== 201) {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));

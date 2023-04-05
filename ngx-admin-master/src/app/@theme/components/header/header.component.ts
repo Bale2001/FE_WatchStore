@@ -20,25 +20,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
   themes = [
     {
       value: 'default',
-      name: 'Light',
+      name: 'Sáng',
     },
     {
       value: 'dark',
-      name: 'Dark',
+      name: 'Tối',
     },
-    {
-      value: 'cosmic',
-      name: 'Cosmic',
-    },
-    {
-      value: 'corporate',
-      name: 'Corporate',
-    },
+    // {
+    //   value: 'cosmic',
+    //   name: 'Cosmic',
+    // },
+    // {
+    //   value: 'corporate',
+    //   name: 'Corporate',
+    // },
   ];
 
   currentTheme = 'default';
 
-  userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
+  userMenu = [ { title: 'Thông tin tài khoản' }, { title: 'Đăng xuất' } ];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,

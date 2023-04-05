@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { AppAdminModule } from './app-admin/app-admin.module';
 import { NbCardModule } from '@nebular/theme';
 import { NgSelectModule } from '@ng-select/ng-select';
@@ -25,6 +24,8 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AppClientModule } from './app-client/app-client.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,13 +33,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NbCardModule,
-    ThemeModule,
-    AppAdminModule,
-    FormsModule,
     AppRoutingModule,
-    NgSelectModule,
-    Ng2SearchPipeModule,
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbDatepickerModule.forRoot(),
@@ -50,6 +45,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    AppAdminModule,
+    AppClientModule,
   ],
   bootstrap: [AppComponent],
 })

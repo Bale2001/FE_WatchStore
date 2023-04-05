@@ -78,6 +78,7 @@ import { IconSearchMinusComponent } from './components/template/icon/search-minu
 import { DialogConfirmComponent } from './components/template/dialog/dialog-confirm/dialog-confirm.component';
 import { NbCardModule } from '@nebular/theme';
 
+
 const NB_MODULES = [
   NbLayoutModule,
   NbMenuModule,
