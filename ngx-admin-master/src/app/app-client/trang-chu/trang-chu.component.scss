@@ -1,0 +1,32 @@
+// ol, ul, dl{
+//     margin-bottom: 0;
+// }
+
+.btn{
+    font-weight: 600;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 0;
+    border-radius: 0;
+    border: unset;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.hero-btn{
+    padding: 25px 29px !important;
+    background: #4a4a4b !important;
+}
+
+.hero-btn2{
+    padding: 25px 29px !important;
+    background: #ff2020 !important;
+}
+p {
+    font-family: "Roboto",sans-serif !important;
+    line-height: 30px !important;
+    margin-bottom: 15px !important;
+    font-weight: normal !important;
+}
+a{
+    text-decoration: none;
+}

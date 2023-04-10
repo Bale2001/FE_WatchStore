@@ -77,6 +77,9 @@ import { IconMinimizeComponent } from './components/template/icon/minimize/icon-
 import { IconSearchMinusComponent } from './components/template/icon/search-minus/icon-search-minus.component';
 import { DialogConfirmComponent } from './components/template/dialog/dialog-confirm/dialog-confirm.component';
 import { NbCardModule } from '@nebular/theme';
+import { ClientHeaderComponent } from './components/client-header/client-header.component';
+import { ClientFooterComponent } from './components/client-footer/client-footer.component';
+import { RouterModule } from '@angular/router';
 
 
 const NB_MODULES = [
@@ -92,7 +95,8 @@ const NB_MODULES = [
   NbSelectModule,
   NbIconModule,
   NbEvaIconsModule,
-  NbCardModule
+  NbCardModule,
+  RouterModule
 ];
 const COMPONENTS = [
   HeaderComponent,
@@ -139,7 +143,9 @@ const COMPONENTS = [
   IconSearchMinusComponent,
   IconSearchPlusComponent,
   IconMinimizeComponent,
-  DialogConfirmComponent
+  DialogConfirmComponent,
+  ClientHeaderComponent,
+  ClientFooterComponent
 ];
 const PIPES = [
   CapitalizePipe,

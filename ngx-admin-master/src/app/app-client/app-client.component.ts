@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-app-client',
-  templateUrl: './app-client.component.html',
-  styleUrls: ['./app-client.component.scss']
+    selector: 'ngx-app-admin',
+    template:
+    `
+        <ngx-three-columns-layout>
+            <router-outlet>
+            </router-outlet>
+        </ngx-three-columns-layout>
+    `
+  
 })
-export class AppClientComponent implements OnInit{
+export class AppClientComponent{
 
-  constructor() { }
-
-  ngOnInit(): void {
-      
-  }
 }

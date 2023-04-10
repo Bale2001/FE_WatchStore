@@ -11,9 +11,6 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppAdminModule } from './app-admin/app-admin.module';
-import { NbCardModule } from '@nebular/theme';
-import { NgSelectModule } from '@ng-select/ng-select';
-import { FormsModule } from './pages/forms/forms.module';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -23,7 +20,6 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppClientModule } from './app-client/app-client.module';
 import { AppRoutingModule } from './app-routing.module';
 
